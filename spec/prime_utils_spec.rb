@@ -22,5 +22,26 @@ describe PrimeUtils do
             end
         end
     end
+
+    describe "first_primes" do
+        
+        context "given 0" do
+            it "returns []" do
+                expect(PrimeUtils.first_primes(0)).to eql([])
+            end
+        end
+
+        context "given 5" do
+            it "returns [2,3,5,7,11]" do
+                expect(PrimeUtils.first_primes(5)).to eql([2,3,5,7,11])
+            end
+        end
+        
+        context "given 15" do
+            it "returns [2,3,5,7,11,13,17,19,23,29,31,37,41,43,47]" do
+                expect(PrimeUtils.first_primes(15)).to eql([2,3,5,7,11,13,17,19,23,29,31,37,41,43,47])
+            end
+        end
+    end
     
 end
